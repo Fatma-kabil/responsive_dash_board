@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dash_board/views/utiles/app_styles.dart';
+import 'package:responsive_dash_board/utiles/app_styles.dart';
 
 class UserInfoListTile extends StatelessWidget {
   const UserInfoListTile(
