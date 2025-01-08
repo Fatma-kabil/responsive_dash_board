@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dash_board/models/all_expenses_item_model.dart';
 
-class AllExpensesItemnHeader extends StatelessWidget {
-  const AllExpensesItemnHeader({super.key, required this.itemModel});
-  final AllExpensesItemModel itemModel;
+
+class AllExpensesItemHeader extends StatelessWidget {
+  const AllExpensesItemHeader({super.key, required this.image,});
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -14,7 +14,7 @@ class AllExpensesItemnHeader extends StatelessWidget {
           height: 60,
           decoration: const ShapeDecoration(
               color: Color(0xffFAFAFA), shape: OvalBorder()),
-          child: Center(child: SvgPicture.asset(itemModel.image)),
+          child: Center(child: SvgPicture.asset(image)),
         ),
         const Expanded(child: SizedBox()),
         Transform.rotate(
