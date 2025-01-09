@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/drawer_item_model.dart';
+import 'package:responsive_dash_board/models/user_info_model.dart';
 import 'package:responsive_dash_board/utiles/app_images.dart';
 import 'package:responsive_dash_board/views/widgets/active_and_inactive_item.dart';
 import 'package:responsive_dash_board/views/widgets/drawer_itetms_listview.dart';
@@ -15,9 +16,11 @@ class CustomDrawer extends StatelessWidget {
       child: const CustomScrollView(slivers: [
         SliverToBoxAdapter(
           child: UserInfoListTile(
-              image: Assets.imagesAvatar3,
-              tile: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com'),
+            userInfoModel: UserInfoModel(
+                image: Assets.imagesAvatar3,
+                tile: 'Lekan Okeowo',
+                subtitle: 'demo@gmail.com'),
+          ),
         ),
         SliverToBoxAdapter(
           child: SizedBox(
@@ -29,7 +32,8 @@ class CustomDrawer extends StatelessWidget {
           hasScrollBody: false,
           child: Column(
             children: [
-              Expanded(child: SizedBox(
+              Expanded(
+                  child: SizedBox(
                 height: 20,
               )),
               InActiveDrawerItem(
