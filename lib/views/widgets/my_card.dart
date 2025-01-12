@@ -18,6 +18,7 @@ class MyCard extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12))),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
               contentPadding:
@@ -31,6 +32,28 @@ class MyCard extends StatelessWidget {
                 style: AppStyles.styleMeduim20,
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
+            ),
+            const Expanded(child: SizedBox()),
+            Padding(
+              padding: const EdgeInsets.only(right: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '0918 8124 0042 81295',
+                    style:
+                        AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+                  ),
+                  Text(
+                    '12/20 - 124',
+                    style:
+                        AppStyles.styleRegular16.copyWith(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 54 - 28,
             )
           ],
         ),
