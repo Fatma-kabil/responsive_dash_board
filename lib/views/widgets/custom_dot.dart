@@ -6,8 +6,8 @@ class CustomDotsIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      height: isActive ? 32 : 8,
-      width: 8,
+      width: isActive ? 32 : 8,
+      height: 8,
       decoration: ShapeDecoration(
           color: isActive ? const Color(0xff4EB7F2) : const Color(0xFFE7E7E7),
           shape:
