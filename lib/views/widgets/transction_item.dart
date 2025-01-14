@@ -16,7 +16,7 @@ class TransctionItem extends StatelessWidget {
           transationModel.title,
           style: AppStyles.styleSemiBold16,
         ),
-        subtitle: Text(transationModel.date, style: AppStyles.styleRegular16),
+        subtitle: Text(transationModel.date, style: AppStyles.styleRegular16.copyWith(color:const Color(0xffAAAAAA))),
         trailing: Text(transationModel.amount,
             style: AppStyles.styleSemiBold20.copyWith(
                 color:
