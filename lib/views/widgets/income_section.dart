@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utiles/app_styles.dart';
 import 'package:responsive_dash_board/views/widgets/custom_background_container.dart';
 import 'package:responsive_dash_board/views/widgets/income_chart.dart';
+import 'package:responsive_dash_board/views/widgets/income_details.dart';
 import 'package:responsive_dash_board/views/widgets/range_option.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -24,7 +25,11 @@ class IncomeSection extends StatelessWidget {
         ),
         Expanded(
           child: Row(
-            children: [Expanded(child: IncomeChart())],
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(child: IncomeChart()),
+              Expanded(child: IncomeDetails())
+            ],
           ),
         )
       ],
