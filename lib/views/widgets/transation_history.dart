@@ -20,6 +20,9 @@ class TransationHistory extends StatelessWidget {
           style:
               AppStyles.styleMeduim16.copyWith(color: const Color(0xFFAAAAAA)),
         ),
+        const SizedBox(
+          height: 16,
+        ),
         const TransctionHistoryListView()
       ],
     );
