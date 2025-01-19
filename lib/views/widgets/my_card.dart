@@ -28,7 +28,7 @@ class MyCard extends StatelessWidget {
                 "Name Card",
                 style: AppStyles.styleRegular16.copyWith(color: Colors.white),
               ),
-              subtitle: const Text(
+              subtitle:  Text(
                 'Syah Bandi',
                 style: AppStyles.styleMeduim20,
               ),

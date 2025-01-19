@@ -9,7 +9,7 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundContainer(
+    return  CustomBackgroundContainer(
         child: Column(
       children: [
         Row(
@@ -18,11 +18,11 @@ class IncomeSection extends StatelessWidget {
               'Income',
               style: AppStyles.styleSemiBold20,
             ),
-            Expanded(child: SizedBox()),
-            RangeOptions()
+           const Expanded(child: SizedBox()),
+           const RangeOptions()
           ],
         ),
-        IncomeSectionBody()
+       const IncomeSectionBody()
       ],
     ));
   }
