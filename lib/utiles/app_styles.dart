@@ -10,7 +10,8 @@ abstract class AppStyles {
       fontWeight: FontWeight.w400,
     );
   }
-static TextStyle styleMeduim16( context) {
+
+  static TextStyle styleMeduim16(context) {
     return TextStyle(
       color: const Color(0xff064061),
       fontSize: getResponsiveFontSize(context, fontsize: 16),
@@ -19,7 +20,7 @@ static TextStyle styleMeduim16( context) {
     );
   }
 
-  static TextStyle styleSemiBold16( context) {
+  static TextStyle styleSemiBold16(context) {
     return TextStyle(
       color: const Color(0xff064061),
       fontSize: getResponsiveFontSize(context, fontsize: 16),
@@ -28,7 +29,7 @@ static TextStyle styleMeduim16( context) {
     );
   }
 
-  static TextStyle styleSemiBold20( context) {
+  static TextStyle styleSemiBold20(context) {
     return TextStyle(
       color: const Color(0xFF064061),
       fontSize: getResponsiveFontSize(context, fontsize: 20),
@@ -37,7 +38,7 @@ static TextStyle styleMeduim16( context) {
     );
   }
 
-  static TextStyle styleRegular12( context) {
+  static TextStyle styleRegular12(context) {
     return TextStyle(
       color: const Color(0xffAAAAAA),
       fontSize: getResponsiveFontSize(context, fontsize: 12),
@@ -46,7 +47,7 @@ static TextStyle styleMeduim16( context) {
     );
   }
 
-  static TextStyle styleSemiBold24( context) {
+  static TextStyle styleSemiBold24(context) {
     return TextStyle(
       color: const Color(0xff4EB7F2),
       fontSize: getResponsiveFontSize(context, fontsize: 24),
@@ -55,7 +56,7 @@ static TextStyle styleMeduim16( context) {
     );
   }
 
-  static TextStyle styleRegular14( context) {
+  static TextStyle styleRegular14(context) {
     return TextStyle(
       color: const Color(0xffAAAAAA),
       fontSize: getResponsiveFontSize(context, fontsize: 14),
@@ -64,7 +65,7 @@ static TextStyle styleMeduim16( context) {
     );
   }
 
-  static TextStyle styleSemiBold18( context) {
+  static TextStyle styleSemiBold18(context) {
     return TextStyle(
       color: const Color(0xff4EB7F2),
       fontSize: getResponsiveFontSize(context, fontsize: 18),
@@ -73,7 +74,7 @@ static TextStyle styleMeduim16( context) {
     );
   }
 
-  static TextStyle styleBold16( context) {
+  static TextStyle styleBold16(context) {
     return TextStyle(
       color: const Color(0xff4EB7F2),
       fontSize: getResponsiveFontSize(context, fontsize: 16),
@@ -82,7 +83,7 @@ static TextStyle styleMeduim16( context) {
     );
   }
 
-  static TextStyle styleMeduim20( context) {
+  static TextStyle styleMeduim20(context) {
     return TextStyle(
       color: Colors.white,
       fontSize: getResponsiveFontSize(context, fontsize: 20),
@@ -90,7 +91,6 @@ static TextStyle styleMeduim16( context) {
       fontWeight: FontWeight.w500,
     );
   }
-
 }
 
 double getResponsiveFontSize(context, {required double fontsize}) {
@@ -109,6 +109,7 @@ double getScaleFactor(context) {
   // var devicePixelRaio = dispatcher.views.first.devicePixelRatio;
   // double width = physicalwidth / devicePixelRaio;
   double width = MediaQuery.sizeOf(context).width;
+  print(width);
   if (width < SizeConfig.tablet) {
     return width / 550;
   } else if (width < SizeConfig.desktop) {
