@@ -14,11 +14,11 @@ class TransctionItem extends StatelessWidget {
       child: ListTile(
         title: Text(
           transationModel.title,
-          style: AppStyles.styleSemiBold16,
+          style: AppStyles.styleSemiBold16(context),
         ),
-        subtitle: Text(transationModel.date, style: AppStyles.styleRegular16.copyWith(color:const Color(0xffAAAAAA))),
+        subtitle: Text(transationModel.date, style: AppStyles.styleRegular16(context).copyWith(color:const Color(0xffAAAAAA))),
         trailing: Text(transationModel.amount,
-            style: AppStyles.styleSemiBold20.copyWith(
+            style: AppStyles.styleSemiBold20(context).copyWith(
                 color:
                     transationModel.isWithdrawer ?const Color(0xFFF3735E) : const Color(0xFF7DD97B))),
       ),

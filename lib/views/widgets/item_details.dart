@@ -15,11 +15,11 @@ class ItemDetails extends StatelessWidget {
               color: itemDatailsModel.color, shape: const OvalBorder())),
       title: Text(
         itemDatailsModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
       trailing: Text(
         itemDatailsModel.value,
-        style: AppStyles.styleMeduim16.copyWith(color:const Color(0xff208CC8)),
+        style: AppStyles.styleMeduim16(context).copyWith(color:const Color(0xff208CC8)),
       ),
     );
   }

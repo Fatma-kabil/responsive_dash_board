@@ -23,7 +23,7 @@ class RangeOptions extends StatelessWidget {
         children: [
            Text(
             'Monthly',
-            style: AppStyles.styleMeduim16,
+            style: AppStyles.styleMeduim16(context),
           ),
           const SizedBox(
             width: 18,

@@ -16,7 +16,7 @@ class IncomeSection extends StatelessWidget {
           children: [
             Text(
               'Income',
-              style: AppStyles.styleSemiBold20,
+              style: AppStyles.styleSemiBold20(context),
             ),
            const Expanded(child: SizedBox()),
            const RangeOptions()
