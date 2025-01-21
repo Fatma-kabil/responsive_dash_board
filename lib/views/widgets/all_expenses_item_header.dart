@@ -6,7 +6,8 @@ class AllExpensesItemHeader extends StatelessWidget {
     super.key,
     required this.image,
     this.imagebackground,
-    this.imagecolor, this.iconcolor,
+    this.imagecolor,
+    this.iconcolor,
   });
   final String image;
   final Color? imagebackground, imagecolor, iconcolor;
@@ -14,26 +15,29 @@ class AllExpensesItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 60,
-          height: 60,
-          decoration: ShapeDecoration(
-              color: imagebackground ?? const Color(0xffFAFAFA),
-              shape: const OvalBorder()),
-          // ignore: deprecated_member_use
-          child: Center(
-              child: SvgPicture.asset(
-            image,
-            colorFilter: ColorFilter.mode(
-                imagecolor ?? const Color(0xff4EB7F2), BlendMode.srcIn),
-          )),
+        Flexible(
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: Container(
+              decoration: ShapeDecoration(
+                  color: imagebackground ?? const Color(0xffFAFAFA),
+                  shape: const OvalBorder()),
+              // ignore: deprecated_member_use
+              child: Center(
+                  child: SvgPicture.asset(
+                image,
+                colorFilter: ColorFilter.mode(
+                    imagecolor ?? const Color(0xff4EB7F2), BlendMode.srcIn),
+              )),
+            ),
+          ),
         ),
         const Expanded(child: SizedBox()),
         Transform.rotate(
           angle: -1.57079633 * 2,
-          child:  Icon(
+          child: Icon(
             Icons.arrow_back_ios_new_outlined,
-            color:iconcolor??const Color(0xff064061),
+            color: iconcolor ?? const Color(0xff064061),
           ),
         )
       ],
