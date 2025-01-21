@@ -109,7 +109,7 @@ double getScaleFactor(context) {
   // var devicePixelRaio = dispatcher.views.first.devicePixelRatio;
   // double width = physicalwidth / devicePixelRaio;
   double width = MediaQuery.sizeOf(context).width;
-  print(width);
+  // print(width);
   if (width < SizeConfig.tablet) {
     return width / 550;
   } else if (width < SizeConfig.desktop) {
